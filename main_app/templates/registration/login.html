@@ -1,14 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Log In</h1>
+<div class="login-container">
+  <img src="https://i.ibb.co/WfBwzk9/cute-bird-silhouette-isolated-icon-design-vector-9482655.png" alt="tweepy logo">
+  <h1>Sign in to Tweeter</h1>
 
-<form method="POST" action="{% url 'login' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <input type="submit" class="btn" value="Login">
-  <input type="hidden" name="next" value="{{ next }}">
-</form>
-
+  <form method="POST" action="{% url 'login' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn" value="Login">
+    <input type="hidden" name="next" value="{{ next }}">
+    <br>
+    <p>Don't have an account?</p><a href="{% url 'signup' %}">Sign up</a>
+  </form>
+</div>
 
 {% endblock %}

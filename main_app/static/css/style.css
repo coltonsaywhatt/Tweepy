@@ -93,3 +93,17 @@
     border-radius: 24px;
 }
 
+.login-container {
+    justify-content: center;
+    font-size: small;
+    background-color: white;
+    width: 840px;
+    height: 400px;
+    margin: auto;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 10px 10px 15px rgb(0 0 0 / 35%);
+}
+.login-container img {
+    height: 50px;
+}
