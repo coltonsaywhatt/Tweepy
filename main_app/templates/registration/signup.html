@@ -1,14 +1,20 @@
 {% extends 'base.html' %}
+
 {% block content %}
 
-<h1>Sign Up</h1>
+<div class="signup-text">
+  
+</div>
 
 {% if error_message %}<p class="red-text">{{ error_message }}</p>{% endif %}
-
-<form method="POST" action="{% url 'signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <input type="submit" class="btn" value="Sign Up">
-</form>
+<div class="signup-container">
+  <img src="https://i.ibb.co/WfBwzk9/cute-bird-silhouette-isolated-icon-design-vector-9482655.png" alt="tweepy logo">
+  <h1>Join Tweeter today!</h1>
+  <form method="POST" action="{% url 'signup' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn" value="Sign Up">
+  </form>
+</div>
 
 {% endblock %}
