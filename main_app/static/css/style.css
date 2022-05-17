@@ -128,3 +128,26 @@
     background-color: gray;
     border-radius: 20px;
 }
+
+.addtweep-container {
+    justify-content: center;
+    font-size: small;
+    background-color: white;
+    margin: auto;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 10px 10px 15px rgb(0 0 0 / 35%);
+    align-items: center;
+}
+
+.addtweep-container input {
+    border-width: 1px;
+    border-radius: 20px;
+}
+.addtweep-btn input {
+    border-width: 1px;
+    padding: 6px 100px;
+    color: white;
+    background-color: gray;
+    border-radius: 20px;
+}
