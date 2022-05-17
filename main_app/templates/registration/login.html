@@ -8,10 +8,17 @@
   <form method="POST" action="{% url 'login' %}">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" class="btn" value="Login">
-    <input type="hidden" name="next" value="{{ next }}">
-    <br>
-    <p>Don't have an account?</p><a href="{% url 'signup' %}">Sign up</a>
+    <div class="login-btn">
+      <input type="submit" class="btn" value="Login">
+      <input type="hidden" name="next" value="{{ next }}">
+    </div>
+
+    <p>Don't have an account?</p>
+    <a href="{% url 'signup' %}">Sign up</a>
+    <div class="login-appDL">
+      <img src="https://i.ibb.co/SRzK0t7/app-store.png" alt="">
+      <img src="https://i.ibb.co/rctSnLk/google-play.png" alt="">
+    </div>
   </form>
 </div>
 

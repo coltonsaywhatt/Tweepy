@@ -97,7 +97,7 @@
     justify-content: center;
     font-size: small;
     background-color: white;
-    width: 840px;
+    width: 600px;
     height: 400px;
     margin: auto;
     border-radius: 15px;
@@ -106,4 +106,25 @@
 }
 .login-container img {
     height: 50px;
+}
+.login-appDL img {
+    width: 150px;
+    height: auto;
+    flex-direction: row;
+}
+
+.signup-btn input {
+    border-width: 1px;
+    padding: 6px 100px;
+    color: white;
+    background-color: gray;
+    border-radius: 20px;
+}
+
+.login-btn input {
+    border-width: 1px;
+    padding: 6px 100px;
+    color: white;
+    background-color: gray;
+    border-radius: 20px;
 }
