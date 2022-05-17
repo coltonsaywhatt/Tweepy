@@ -1,0 +1,8 @@
+{% extends 'base.html' %} {% block content %} {% if searched %}
+<h1>You searched for {{ searched }}</h1>
+<br />
+{% for tweep in tweeps %}
+<a href="{% url 'detail' tweep.id %}"> {{ tweep }} </a><br />
+{% endfor %} {% else %}
+<h1>No search results came up!</h1>
+{% endif %} {% endblock %}

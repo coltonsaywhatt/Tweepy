@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- <h1>{{ cake.name }}</h1> -->
+
+
+<div class="card">
+  <div class="card-content">
+      <p>Created By: {{ tweep.user.username }}</p>
+      <br>
+      <p>Date: {{ tweep.creation_date }}</p>
+      <br>
+      <p>Tweep: {{ tweep.tweeps }}</p>
+      <br>
+      {% for tag in tweep.tags.all %}
+        <a href="{% url 'tweeps_by_tag' tag.slug %}">{{tag.name}}</a>
+        {% endfor %}
+    </div>
+    <div class="card-action">
+        <a href="{% url 'tweeps_update' tweep.id %}">Edit</a>
+        <a href="{% url 'tweeps_delete' tweep.id %}">Delete</a>
+      </div>
+  </div>
+
+{% endblock %}

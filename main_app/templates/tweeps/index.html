@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{{tag}}
+
+<h1 class="slogan">Tweeps</h1>
+
+{% for tweep in tweeps %}
+  <div class="card">
+      <a href="/tweeps/{{ tweep.id }}">
+    <div class="card-content">
+      <div class="col-*-*">
+      <p>user: {{ tweep.user.username }}</p> 
+      <p>Date: {{ tweep.creation_date }}</p>
+      <p>tweep: {{ tweep.tweeps }}</p>
+      </div>
+    </div>
+    </a>
+  </div>
+{% endfor %}
+
+
+
+{% endblock %}
