@@ -2,12 +2,11 @@ from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
 from taggit.managers import TaggableManager
-# from taggit.serializers import (TagListSerializerField, TaggitSerializer)
-
+from django.utils import timezone
 
 class Tweep(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    creation_date = models.DateField()
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='tweeps')
+    timestamp = models.DateTimeField(default=timezone.now)
     tweeps = models.TextField(max_length=600)
     tags = TaggableManager()
 

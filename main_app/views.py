@@ -19,7 +19,7 @@ class TweepCreate(CreateView):
 
 class TweepUpdate(UpdateView):
   model = Tweep
-  fields = ['description', 'recipe']
+  fields = ['tweeps']
 
 class TweepDelete(DeleteView):
   model = Tweep
