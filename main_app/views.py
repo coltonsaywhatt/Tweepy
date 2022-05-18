@@ -35,6 +35,9 @@ def home(request):
 def about(request):
   return render(request, 'about.html')
 
+def profile(request):
+  return render(request, 'profile.html')
+
 def tweeps_index(request):
   tweeps = Tweep.objects.all()
   return render(request, 'tweeps/index.html', { 'tweeps': tweeps })
