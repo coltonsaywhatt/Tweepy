@@ -20,6 +20,12 @@
         <a href="{% url 'tweeps_update' tweep.id %}">Edit</a>
         <a href="{% url 'tweeps_delete' tweep.id %}">Delete</a>
       </div>
-  </div>
+      <!-- Insert photo markup below this comment -->
+      {% for photo in tweep.photo_set.all %}
+      <img class="responsive-img card-panel" src="{{photo.url}}" alt="Tweeps">
+      {% empty %}
+      <div class="card-panel teal-text center-align">No Photos Uploaded</div>
+      {% endfor %}
+    </div>
 
 {% endblock %}

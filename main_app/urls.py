@@ -12,4 +12,6 @@ urlpatterns = [
   path('tweeps/<int:pk>/update/', views.TweepUpdate.as_view(), name='tweeps_update'),
   path('tweeps/<int:pk>/delete/', views.TweepDelete.as_view(), name='tweeps_delete'),
   path('tags/<slug:tag_slug>/', views.tweeps_by_tag, name='tweeps_by_tag'),
+  path('tweeps/<int:tweep_id>/add_photo/', views.add_photo, name='add_photo'),
+
 ]
