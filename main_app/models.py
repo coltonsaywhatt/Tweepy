@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from taggit.managers import TaggableManager
 from django.utils import timezone
 
+
 class Tweep(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='tweeps')
     timestamp = models.DateTimeField(default=timezone.now)
