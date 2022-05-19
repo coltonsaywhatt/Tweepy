@@ -14,5 +14,6 @@ urlpatterns = [
   path('tweeps/<int:pk>/delete/', views.TweepDelete.as_view(), name='tweeps_delete'),
   # path('tags/<slug:tag_slug>/', views.tweeps_by_tag, name='tweeps_by_tag'),
   path('tweeps/<int:tweep_id>/add_photo/', views.add_photo, name='add_photo'),
+  path('comments/<int:comment_id>/add_comment', views.add_comment, name='add_comment'),
 
 ]

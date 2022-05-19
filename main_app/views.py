@@ -1,5 +1,11 @@
 import imp
-from .models import Tweep
+from time import timezone
+import django
+
+from psycopg2 import Timestamp
+from .forms import CommentForm
+from .models import Tweep, Photo
+import datetime
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView
 from django.shortcuts import render, redirect
@@ -14,8 +20,28 @@ import boto3
 
 class TweepCreate(CreateView):
   model = Tweep
-  fields = '__all__'
-  success_url = '/tweeps/'
+  fields = ['tweeps']
+
+  def form_valid(self, form):
+    form.instance.timestamp = datetime.datetime.now()
+    form.instance.user = self.request.user
+    super().form_valid(form)
+    photo_file = self.request.FILES.get('photo-file', None)
+    if photo_file:
+      s3 = boto3.client('s3')
+      # need a unique "key" for S3 / needs image file extension too
+      key = uuid.uuid4().hex[:6] + photo_file.name[photo_file.name.rfind('.'):]
+       # just in case something goes wrong
+      try:
+          bucket = os.environ['S3_BUCKET']
+          s3.upload_fileobj(photo_file, bucket, key)
+          # build the full url string
+          url = f"{os.environ['S3_BASE_URL']}{bucket}/{key}"
+          Photo.objects.create(url=url, tweep_id=self.object.id)
+      except Exception as e:
+          print('An error occurred uploading file to S3')
+          print(e)
+    return redirect('index')
 
 class TweepUpdate(UpdateView):
   model = Tweep
@@ -68,22 +94,32 @@ def signup(request):
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)
 
+
+@login_required
+def add_comment(request, tweep_id):
+  form = CommentForm(request.POST)
+  if form.is_valid():
+    new_comment = form.save(commit=False)
+    new_comment.tweep_id = tweep_id
+    new_comment.save()
+  return redirect('detail', tweep_id=tweep_id)
+
 @login_required
 def add_photo(request, tweep_id):
     # photo-file will be the "name" attribute on the <input type="file">
-    photo_file = request.FILES.get('photo-file', None)
-    if photo_file:
-        s3 = boto3.client('s3')
-        # need a unique "key" for S3 / needs image file extension too
-        key = uuid.uuid4().hex[:6] + photo_file.name[photo_file.name.rfind('.'):]
-        # just in case something goes wrong
-        try:
-            bucket = os.environ['S3_BUCKET']
-            s3.upload_fileobj(photo_file, bucket, key)
-            # build the full url string
-            url = f"{os.environ['S3_BASE_URL']}{bucket}/{key}"
-            Photo.objects.create(url=url, tweep_id=tweep_id)
-        except Exception as e:
-            print('An error occurred uploading file to S3')
-            print(e)
-    return redirect('detail', tweep_id=tweep_id)
+  photo_file = request.FILES.get('photo-file', None)
+  if photo_file:
+      s3 = boto3.client('s3')
+      # need a unique "key" for S3 / needs image file extension too
+      key = uuid.uuid4().hex[:6] + photo_file.name[photo_file.name.rfind('.'):]
+       # just in case something goes wrong
+      try:
+          bucket = os.environ['S3_BUCKET']
+          s3.upload_fileobj(photo_file, bucket, key)
+          # build the full url string
+          url = f"{os.environ['S3_BASE_URL']}{bucket}/{key}"
+          Photo.objects.create(url=url, tweep_id=tweep_id)
+      except Exception as e:
+          print('An error occurred uploading file to S3')
+          print(e)
+  return redirect('detail', tweep_id=tweep_id)

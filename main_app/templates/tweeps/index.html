@@ -15,7 +15,9 @@
     
   </div>
   <div class="tweet-img-wrap">
-    <img src="">
+    {% for photo in tweep.photo_set.all %}
+      <img src="{{ photo.url }}">
+    {% endfor %}
   </div>
   <div class="tweet-info-counts">
     
