@@ -1,8 +1,18 @@
-.bg-image {
-    /* background-size: 80%;
-    background-repeat: no-repeat;
-    background-color: black;
-    background-position: center; */
+* {
+	box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #63a4ff;
+    background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
 }
 
 .navbar-custom {
@@ -94,23 +104,17 @@
 }
 
 .login-container {
-    justify-content: center;
     font-size: small;
     background-color: white;
     width: 600px;
-    height: 400px;
-    margin: auto;
     border-radius: 15px;
     text-align: center;
     box-shadow: 10px 10px 15px rgb(0 0 0 / 35%);
 }
+
 .login-container img {
     height: 50px;
-}
-.login-appDL img {
-    width: 150px;
-    height: auto;
-    flex-direction: row;
+    margin: 10px;
 }
 
 .signup-btn input {

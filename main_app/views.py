@@ -25,9 +25,9 @@ class TweepDelete(DeleteView):
   model = Tweep
   success_url = '/tweeps/'
 
-def tweeps_by_tag(request, tag_slug):
-  tweeps = Tweep.objects.filter(tags__name__in=[tag_slug])
-  return render(request, 'tweeps/index.html', {'tweeps': tweeps, 'tag': tag_slug})
+# def tweeps_by_tag(request, tag_slug):
+#   tweeps = Tweep.objects.filter(tags__name__in=[tag_slug])
+#   return render(request, 'tweeps/index.html', {'tweeps': tweeps, 'tag': tag_slug})
 
 def home(request):
   return render(request, 'home.html')
