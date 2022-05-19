@@ -1,44 +1,40 @@
-{% extends 'base.html' %}
+{% load static %}
 {% block content %}
 
-
-<!-- <div style="background-image: url('https://images.unsplash.com/photo-1599785209615-a35f883d93c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80')" class="home-container" id="cuptweeppic"> -->
-  
-  <ul>
-    <!-- <form class="d-flex" method="POST" action="{% url 'tweep_search' %}">
-        {% csrf_token %}
-      <input class="form-control me-2" type="search" placeholder="Search Tweeps!" aria-label="Search" name="searched">
-      <button type="submit">Search</button>
-    </form> -->
-  </ul>
-  <div class="slogansss">
-    <h1 class="slogan">Welcome to Tweepy</h1>
-  </div>
-</div>
-
-
-<div class="login-container">
-  <img src="https://i.ibb.co/WfBwzk9/cute-bird-silhouette-isolated-icon-design-vector-9482655.png" alt="tweepy logo">
-  <h1>Sign in to Tweeter</h1>
-
-  <form method="POST" action="{% url 'login' %}">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <div class="login-btn">
-      <input type="submit" class="btn" value="Login">
-      <input type="hidden" name="next" value="{{ next }}">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tweepy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-content">
+        <img src="https://i.ibb.co/WfBwzk9/cute-bird-silhouette-isolated-icon-design-vector-9482655.png" alt="tweepy logo">
+        <h1>Welcome to Tweepy!</h1>
+        <h4>Sign in to Tweeter</h4>
+        <form method="POST" action="{% url 'login' %}">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <div class="login-btn">
+            <input type="submit" class="btn" value="Login">
+            <input type="hidden" name="next" value="{{ next }}">
+          </div>
+          <p>Don't have an account?</p>
+          <a href="{% url 'signup' %}">Sign up</a>
+          <div class="login-appDL">
+            <img src="https://i.ibb.co/SRzK0t7/app-store.png" alt="">
+            <img src="https://i.ibb.co/rctSnLk/google-play.png" alt="">
+        </form>
+      </div>
     </div>
-
-    <p>Don't have an account?</p>
-    <a href="{% url 'signup' %}">Sign up</a>
-    <div class="login-appDL">
-      <img src="https://i.ibb.co/SRzK0t7/app-store.png" alt="">
-      <img src="https://i.ibb.co/rctSnLk/google-play.png" alt="">
-    </div>
-  </form>
-</div>
-
-
-
-
+    
+  </body>
+</html>
 {% endblock %}

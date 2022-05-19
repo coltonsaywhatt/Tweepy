@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
-<!-- {% block content %}
+{% block content %}
 
-{{tag}}
 
 <h1 class="slogan">Tweeps</h1>
 
@@ -10,14 +9,15 @@
       <a href="/tweeps/{{ tweep.id }}">
     <div class="card-content">
       <div class="col-*-*">
-      <p>user: {{ tweep.user.username }}</p> 
-      <p>Date: {{ tweep.creation_date }}</p>
-      <p>tweep: {{ tweep.tweeps }}</p>
+      <p>@{{ tweep.user.username }}</p> 
+      <p>{{ tweep.timestamp }}</p>
+      <p>{{ tweep.tweeps }}</p>
+      <!-- <p>{{ tweep.tag }}</p> -->
       </div>
     </div>
     </a>
   </div>
-{% endfor %} -->
+{% endfor %}
 
 
 

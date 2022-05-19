@@ -1,15 +1,15 @@
 from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
-from taggit.managers import TaggableManager
+# from taggit.managers import TaggableManager
 from django.utils import timezone
 
 
 class Tweep(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='tweeps')
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     timestamp = models.DateTimeField(default=timezone.now)
-    tweeps = models.TextField(max_length=600)
-    tags = TaggableManager()
+    tweeps = models.TextField(max_length=1000)
+    # tags = TaggableManager()
 
     def __str__(self):
         return self.name
