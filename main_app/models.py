@@ -1,4 +1,4 @@
-from pyexpat import model
+# from pyexpat import model
 from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
@@ -29,6 +29,7 @@ class Comment(models.Model):
     timestamp = models.DateTimeField(default=timezone.now)
     content = models.CharField(max_length=100)
     tweep = models.ForeignKey(Tweep, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"Photo for tweep_id: {self.comment_id} @{self.url}"

@@ -1,7 +1,6 @@
 import imp
 from time import timezone
 import django
-
 from psycopg2 import Timestamp
 from .forms import CommentForm
 from .models import Tweep, Photo
