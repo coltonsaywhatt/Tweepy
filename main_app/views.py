@@ -69,7 +69,8 @@ def tweeps_index(request):
 
 def tweeps_detail(request, tweep_id):
   tweep = Tweep.objects.get(id=tweep_id)
-  return render(request, 'tweeps/detail.html', { 'tweep': tweep})
+  return render(request, 'tweeps/detail.html', { 'tweep': tweep })
+  
 
 def tweep_search(request):
   if request.method == "POST":
