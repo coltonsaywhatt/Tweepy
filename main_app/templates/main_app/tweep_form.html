@@ -1,21 +1,36 @@
-{% extends 'base.html' %}
-
+{% extends 'base.html' %} 
 {% block content %}
+
 <div class="addtweep-container">
   {% if object %}
-    <h1>Edit <span class="teal-text">{{object.name}}</span></h1>
-  {% else %}
-    <h1>Add a Tweep!</h1>
+  <h1>
+    Edit <span class="teal-text">{{object.name}}</span>
+  </h1>
+  
   {% endif %}
-  <form action="" enctype="multipart/form-data" method="POST">
+  <form action="" enctype="multipart/form-data" method="post">
     {% csrf_token %}
-    <table>
-      {{ form.as_table }}
-    </table>
-    <input type="file" name="photo-file">
-    <div class="addtweep-btn">
-      <input type="submit" value="Add Tweep!" class="btn">
+    <div class="wrapper">
+      <div class="input-box">
+        <div class="tweet-area">
+          {{ form.tweeps }}
+        </div>
+      </div>
+    </div>
+    <div class="submit-btn">
+      <input class="btn" type="submit" value="Tweep">
+    </div>
+    <div class="bottom">
+      <ul class="icons">
+        <li><i class="fas fa-map-marker-alt"></i></li>
+        <li>
+          <div class="image-upload">
+            <i class="far fa-file-image"></i> <input name="photo-file" type="file">
+          </div>
+        </li>
+      </ul>
     </div>
   </form>
 </div>
+
 {% endblock %}
