@@ -32,7 +32,7 @@
       <div class="likes-count">
       </div>
     </div>
-
+    {% csrf_token %}
     <div class="edit-delete">
       <div class="edit">
         <a href="{% url 'tweeps_update' tweep.id %}"><i class="ri-edit-2-line"></i></a>
