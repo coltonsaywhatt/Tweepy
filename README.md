@@ -45,7 +45,8 @@ Tweepy is used to share information quickly. Because tweeps can be delivered to 
 ![Django](https://img.shields.io/badge/-Django-333?style=flat&logo=django)
 
 ## :atom_symbol: Getting Started: 
-Top KEK was made in Django/Python. 
+Top KEK was made in Django/Python.
+<br>
 [[Launch App]](https://tweepyofficial.herokuapp.com/) 
 [[Trello]](https://trello.com/b/eM3yXayv/tweepy)
 
