@@ -27,9 +27,10 @@ Tweepy is used to share information quickly. Because tweeps can be delivered to 
 ![Django](https://img.shields.io/badge/-Django-333?style=flat&logo=django)
 
 ## Getting Started
-[Trello](https://trello.com/b/eM3yXayv/tweepy)
+[[Trello]](https://trello.com/b/eM3yXayv/tweepy)
+<br>
 Deployed Link (Heroku)
-[Tweepy](https://tweepyofficial.herokuapp.com/)
+[[Tweepy]](https://tweepyofficial.herokuapp.com/)
 
 
 ## Next Steps
