@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="row" id="Comments">
+    <div class="col s12">
+      <h3>{{ tweep.user }}'s Comments</h3>
+      <form action="{% url 'add_comment' tweep.id %}" method="POST">
+        {% csrf_token %}
+        {{ comment_form.as_p }}
+        <input type="submit" value="Submit!" class="btn">
+      </form>
+      <br>
+      <table class="striped">
+        <thead>
+          <tr>
+            <th>Date </th>
+            <th>Comment</th>
+            <th>User</th>
+          </tr>
+        </thead>
+        {% for comment in tweep.comment_set.all %}
+          <tbody>
+              <tr>
+                <td>{{comment.date}}</td>
+                <td>{{comment.content}}</td>
+                <td>{{comment.user}}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+    </div>
+
+{% endblock %}

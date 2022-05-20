@@ -10,20 +10,16 @@
       <br>
       <p>{{ tweep.tweeps }}</p>
       <br>
-      <!-- {% for tag in tweep.tags.all %}
-        <a href="{% url 'tweeps_by_tag' tag.slug %}">{{tag.name}}</a>
-        {% endfor %} -->
     </div>
     <div class="card-action">
         <a href="{% url 'tweeps_update' tweep.id %}">Edit</a>
         <a href="{% url 'tweeps_delete' tweep.id %}">Delete</a>
       </div>
       {% for photo in tweep.photo_set.all %}
-      <img class="responsive-img card-panel" src="{{photo.url}}" alt="Profile photo">
+        <img class="responsive-img card-panel" src="{{photo.url}}" alt="Profile photo">
       {% empty %}
-      <div class="card-panel teal-text center-align">No Photos Uploaded</div>
+        <div class="card-panel teal-text center-align">No Photos Uploaded</div>
       {% endfor %}
-      <!-- {% if tweeps.user == user %} -->
       <form action="{% url 'add_photo' tweep.id %}" enctype="multipart/form-data" method="POST" alt="Tweep Photo" class="card-panel">
       {% csrf_token %}
       <input type="file" name="photo-file">
@@ -31,23 +27,6 @@
       <input type="submit" class="btn" value="Upload Photo">
     </form>
       
- 
     </div>
-
-
-
-
-
-
-
-
-
-
-      <!-- {% for photo in tweep.photo_set.all %}
-      <img class="responsive-img card-panel" src="{{photo.url}}" alt="Tweeps">
-      {% empty %}
-      <div class="card-panel teal-text center-align">No Photos Uploaded</div>
-      {% endfor %}
-    </div> -->
 
 {% endblock %}
