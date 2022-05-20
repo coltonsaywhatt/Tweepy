@@ -1,3 +1,11 @@
+<p align="center">
+<img alt="Project Logo" src="https://i.ibb.co/RzQgCpR/tweepy.png">
+<br>
+
+<img alt="GitHub forks" src="https://img.shields.io/github/forks/coltonsaywhatt/Tweeper?style=social">
+<img alt="GitHub commits" src="https://img.shields.io/github/last-commit/coltonsaywhatt/Tweeper">
+</p>
+
 <div align="center">
    <h1> Hugs for Debugs </h1>
    <h2> Project 3 </h2>
@@ -5,17 +13,20 @@
 <h5>Team Member: Maroof Khan, Ronald Portalatin , Kensloe Lariviere </h5>
 We at Tweeps work hard to provide the best product we can to our customers. The product is constantly updated with new features that are requested by our users.
    
-## 
+## :eyes: Tweepy Overview:
+   
 Tweepy is a free social networking site where users broadcast short posts known as tweeps. These tweeps can contain text, videos, photos or links.
 Tweepy is used to share information quickly. Because tweeps can be delivered to followers in real time, they might seem like instant messages (IM) to the novice user. But unlike IMs that disappear when the user closes the application, tweets are also posted on the Tweepy website. They are permanent, searchable and public. There is also an option to protect tweeps so only followers can read tweets.
 
 
 ## Screenshots
+<summary> :camera: Screenshots</summary>
 | Description | Screenshot |
 |------------ | ------------|
 </details>
 
-## Technoloies Used
+## :computer: Technologies Used
+
 ![HTML5](https://img.shields.io/badge/-HTML5-333?style=flat&logo=html5)
 ![CSS3](https://img.shields.io/badge/-CSS-333?style=flat&logo=css3)
 ![Trello](https://img.shields.io/badge/-Trello-333?style=flat&logo=trello)
@@ -26,14 +37,12 @@ Tweepy is used to share information quickly. Because tweeps can be delivered to 
 ![Python](https://img.shields.io/badge/-Python-333?style=flat&logo=python)
 ![Django](https://img.shields.io/badge/-Django-333?style=flat&logo=django)
 
-## Getting Started
+## :atom_symbol: Getting Started: 
+Top KEK was made in Django/Python. 
+[[Launch App]](https://tweepyofficial.herokuapp.com/) 
 [[Trello]](https://trello.com/b/eM3yXayv/tweepy)
-<br>
-Deployed Link (Heroku)
-[[Tweepy]](https://tweepyofficial.herokuapp.com/)
 
-
-## Next Steps
+## :fast_forward: Next Steps  
 
 ### Upcoming Features
 
