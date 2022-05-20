@@ -20,9 +20,16 @@ Tweepy is used to share information quickly. Because tweeps can be delivered to 
 
 
 ## Screenshots
+<details>
 <summary> :camera: Screenshots</summary>
-| Description | Screenshot |
-|------------ | ------------|
+
+  | Description | Screenshot |
+  |------------ | ------------|
+  | <h3 align="center">Login</h3> | <img src="https://i.ibb.co/JnGgNZh/Screen-Shot-2022-05-20-at-12-54-11-PM.png"/>
+  | <h3 align="center">Signup</h3> | <img src="https://i.ibb.co/HV10q6B/Screen-Shot-2022-05-20-at-12-54-52-PM.png"/>
+  | <h3 align="center">Landing Page</h3> | <img src="https://i.ibb.co/9ghMt5W/Screen-Shot-2022-05-20-at-12-58-11-PM.png"/>
+  | <h3 align="center">Add Tweep</h3> | <img src="https://i.ibb.co/tJBbxW2/Screen-Shot-2022-05-20-at-12-58-25-PM.png"/>
+  | <h3 align="center">Edit Tweep</h3> | <img src="https://i.ibb.co/BrPQz9N/Screen-Shot-2022-05-20-at-12-58-57-PM.png"/>
 </details>
 
 ## :computer: Technologies Used
