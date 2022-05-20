@@ -1,9 +1,13 @@
 <div align="center">
    <h1> Hugs for Debugs </h1>
-   <h2> Project 3  (P3) </h2>
+   <h2> Project 3 </h2>
 
 <h5>Team Member: Maroof Khan, Ronald Portalatin , Kensloe Lariviere </h5>
 We at Tweeps work hard to provide the best product we can to our customers. The product is constantly updated with new features that are requested by our users.
+   
+## 
+Tweepy is a free social networking site where users broadcast short posts known as tweeps. These tweeps can contain text, videos, photos or links.
+Tweepy is used to share information quickly. Because tweeps can be delivered to followers in real time, they might seem like instant messages (IM) to the novice user. But unlike IMs that disappear when the user closes the application, tweets are also posted on the Tweepy website. They are permanent, searchable and public. There is also an option to protect tweeps so only followers can read tweets.
 
 
 ## Screenshots
@@ -23,8 +27,9 @@ We at Tweeps work hard to provide the best product we can to our customers. The 
 ![Django](https://img.shields.io/badge/-Django-333?style=flat&logo=django)
 
 ## Getting Started
-
+[Trello](https://trello.com/b/eM3yXayv/tweepy)
 Deployed Link (Heroku)
+[Tweepy](https://tweepyofficial.herokuapp.com/)
 
 
 ## Next Steps
@@ -36,4 +41,12 @@ Deployed Link (Heroku)
 - [ ] Mobile Friendly
 
 - [ ] Able to log in with Google or Twitter
+
+- [ ] Ability to tweep a video file
+
+- [ ] Add user profile
+
+- [ ] Ability to edit bio
+
+- [ ] Ability to search for tags or for other users
   
