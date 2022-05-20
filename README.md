@@ -58,7 +58,7 @@ Top KEK was made in Django/Python.
 
 - [ ] Mobile Friendly
 
-- [ ] Able to log in with Google or Facebook
+- [ ] Able to log in with Google or Facebook and Twitter
 
 - [ ] Ability to tweep a video file
 
